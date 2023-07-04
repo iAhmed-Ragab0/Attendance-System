@@ -1,0 +1,28 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.mainwrapper{
+    width: 100vw;
+    height: 100vh;
+    /* margin-top: 10rem; */
+}
+.content h1{
+    font-family: CircularStd, sans-serif;
+    font-size: 2.5rem;
+    margin-top: 1ren;
+    font-weight: bold;
+}
+.btn-1{
+    margin-top: 1rem;
+    background: linear-gradient(to right,#025392 0%, #2a79c4 100%);
+    font-family: CircularStd, sans-serif;
+}
+body{
+    background-image: url(../pics/1.jpg);
+    background-size: cover;
+    background-position: right ;
+}

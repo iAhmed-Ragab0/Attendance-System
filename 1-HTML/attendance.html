@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../2-Style/attendance.css" />
+    <link rel="stylesheet" href="../2-Style/bootstrap.min.css" />
+    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet" />
+    <title>Attendance</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+    />
+    <link
+      href="assets/plugins/global/plugins.bundle.css"
+      rel="stylesheet"
+      type="stylesheet/css"
+    />
+
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet" />
+    <link rel="stylesheet" href="../2-Style/bootstrap.min.css">
+    <link rel="stylesheet" href="../2-Style/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="../2-Style/admin.css" />
+  </head>
+  <body>
+
+    <div
+      class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column"
+      id="sidebar"
+    >
+      <ul class="nav flex-column text-white w-100">
+        <a href="#" class="nav-link h3 text-white my-2"> DashBoard </a>
+        <h6 class="m-2">Main</h6>
+        
+        <!-- <li href="#" class="nav-link" id="empLi">
+          <i class="bx bx-user-check"></i>
+          <a class="mx-2" href="#" style="text-decoration:none;color:inherit;">Profile</a>
+        </li> -->
+        <li href="#" class="nav-link h6" id="dailyLi">
+          <i class="bx bx-conversation"></i>
+          <a class="mx-2" href="#" style="text-decoration:none;color:inherit;">Attendance page</a>
+        </li>
+
+      </ul>
+    </div>
+    
+    <div class=" my-container active-cont">
+      <nav class="navbar top-navbar navbar-light px-5" id="menu">
+        <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
+        <button class="btn-Out  text-light border rounded  p-1 px-3 " id="logout">logout</button>
+      </nav>
+
+
+    <div class="mainwrapper">
+      <div class="container">
+        <div class="row text-center">
+          <div class="content col-8 col-md-8 col-lg-8">
+            <h1 class="mt-5 mb-5">Welcome To Attendance Page !</h1>
+            <input type="text" id="empName" placeholder="Enter Employee User Name" />
+            <button class="btn mr-5 mt-md-0 mt-3 btn-1 text-light" id="confirm-attend">
+              Confirm 
+            </button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="../3-JavaScript/jquery-3.5.1.js"></script>
+    <script src="../3-JavaScript/jquery.dataTables.min.js "></script>
+    <script src="../3-JavaScript/attendance.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

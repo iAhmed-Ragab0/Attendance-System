@@ -1,0 +1,27 @@
+.invalidSpan{
+    display: none;
+    font-size: small;
+    color: red;
+        
+    }
+   .sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+   }
+h2{
+    text-shadow: 2px 2px 2px #b5afaf;
+}
+#sign2{
+    background-color: rgb(238 238 238);
+    border-radius: 20px;
+}
+.btn-1{
+    margin-top: 1rem;
+    background: linear-gradient(to right,#025392 0%, #2a79c4 100%);
+    font-family: CircularStd, sans-serif;
+}   
+p > a {
+    text-decoration: none;
+  }

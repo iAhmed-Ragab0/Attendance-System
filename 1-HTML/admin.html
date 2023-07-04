@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link 
+      rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+      crossorigin="anonymous" 
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+    />
+    <link
+      href="assets/plugins/global/plugins.bundle.css"
+      rel="stylesheet"
+      type="stylesheet/css"
+    />
+    <!-- link chart js -->
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet" />
+    <link rel="stylesheet" href="../2-Style/bootstrap.min.css">
+    <link rel="stylesheet" href="../2-Style/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="../2-Style/admin.css" />
+    <!-- <link rel="stylesheet" href="../1-HTML/login.html" /> -->
+
+     <!-- Email script -->
+     <script src="../3-JavaScript/email.min.js"></script>
+     <script>(function(){emailjs.init("h9pKvzl7TZ6FQIBIy");})();</script>
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </head>
+  <body>
+
+
+    <div
+      class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column"
+      id="sidebar"
+    >
+      <ul class="nav flex-column text-white w-100">
+        <a href="#" class="nav-link h3 text-white my-2"> DashBoard </a>
+        <h6 class="m-2">Main</h6>
+        <li href="#" class="nav-link h6" id="pendingLi">
+          <i class="las la-tachometer-alt"></i>
+          <a class="mx-2" href="#" style="text-decoration:none;color:inherit;">Pending Employee</a>
+        </li>
+        <li href="#" class="nav-link" id="empLi">
+          <i class="bx bx-user-check"></i>
+          <a class="mx-2" href="#" style="text-decoration:none;color:inherit;">Current Employee</a>
+        </li>
+        <li href="#" class="nav-link h6" id="dailyLi">
+          <i class="bx bx-conversation"></i>
+          <a class="mx-2" href="#" style="text-decoration:none;color:inherit;">Daily Report</a>
+        </li>
+        <li href="#"  class="nav-link" id="rangLi">
+          <i class="bx bx-conversation"></i>
+          <a class="mx-2" href="#" style="text-decoration:none;color:inherit;">Custom Range Report</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class=" my-container active-cont">
+      
+
+
+      <nav class="navbar top-navbar navbar-light px-5" id="menu">
+        <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
+        <button class="btn-Out text-light border rounded p-1 px-3 " >logout</button>
+      </nav>
+
+      <h3 class="text-dark p-3 col-12" id="admin-text">Welcome Admin !</h3>
+      <h6 id="dash">Dashboard</h6>
+
+      <div class="content container-fluid">
+        <div class="page-header " id="allTablesContainer">
+                          <!---------- ----------------table pending  ------------------------------->
+          <div class="row" id="pendingEmpCont">
+            <div class="col-md-12 col-lg-12">
+              <div class="row">
+
+                <div class="table-title">
+                  <h2>Pending Table</h2>
+                </div>  
+
+                <div class="table-container col-12 col-md-8 col-lg-12  ">
+                  <table
+                    id="pending-table"
+                    class="table table-striped col-4 col-md-8 col-lg-12 w-col-4 "
+                    style="width: 100%" >
+                    <thead>
+                      <tr>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Approve</th>
+                        <th>Disapprove</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table> 
+                </div>
+
+              </div>
+            </div>
+          </div>
+                      <!-- ------------------- Employee Table ---------------------- -->
+          <div class="row" id="EmployeeContainer">
+            <div class="col-md-12 col-lg-12">
+              <div class="row">
+
+                <div class="table-title">
+                  <h2>Employee Table</h2>
+                </div>  
+
+                <div class="table-container col-12 col-md-8 col-lg-12">
+                  <table
+                    id="table-employee"
+                    class="table table-striped"
+                    style="width: 100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                      </tr>
+                      <tbody>
+
+                      </tbody>
+                    </thead>
+                  </table>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+                        <!-- ------------------- Daily report Table ---------------------- -->
+          <div class="row" id="dailyReportContainer">
+            <div class="col-md-12 col-lg-12">
+              <div class="row">
+
+                <div class="table-title">
+                  <h2>Daily report</h2>
+                </div>
+
+                <div class="table-container col-12 col-md-8 col-lg-12">
+                  <table
+                    id="dailyReport-table"
+                    class="table table-striped"
+                    style="width: 100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Emplyee Name</th>
+                        <th>User ID</th>
+                        <th>Date</th>
+                        <th>in</th>
+                        <th>out</th>
+                      </tr>
+                      <tbody>
+
+                      </tbody>
+                    </thead>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+                          <!-- ------------------- Rang report Table ---------------------- -->
+          <div class="row" id="rangeReportContainer">
+            <div class="col-md-12 col-lg-12">
+              <div class="row">
+
+                <div class="table-title">
+                  <h2>Range report</h2>
+                </div>
+
+                <div class="">
+                  <input type="date" name="dateFrom" id="dateFrom" > 
+                  <input type="date" name="dateTo" id="dateTo" > 
+                  <button id="searchBtn" class="btn-search text-light border rounded  p-1 px-3 ">Serach</button>
+                </div>
+                
+
+                <div class="table-container col-12 col-md-8 col-lg-12">
+                  <table
+                    id="table-monthly"
+                    class="table table-striped"
+                    style="width: 100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Employee Name</th>
+                        <th>Late Times</th>
+                        <th>Abscence Times</th>
+                        <th>Attend Times</th>
+                        <th>Execuses Times</th>
+                      </tr>
+                      <tbody>
+
+                      </tbody>
+                    </thead>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="../3-JavaScript/jquery-3.5.1.js"></script>
+    <script src="../3-JavaScript/jquery.dataTables.min.js "></script>
+    <script src="../3-JavaScript/dataTables.bootstrap5.min.js"></script>
+    <script src="../3-JavaScript/admin.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+  </body>
+</html>

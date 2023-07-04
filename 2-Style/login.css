@@ -1,0 +1,30 @@
+.invalidSpan{
+    display: none;
+    font-size: small;
+    color: red;
+        
+    }
+.sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    }
+.sign2{
+    height: 450px;
+    background-color: rgb(238 238 238);
+    border-radius: 20px;
+
+}
+h2{
+    text-shadow: 2px 2px 2px #8e8a8a;
+}
+
+.btn-1{
+    margin-top: 1rem;
+    background: linear-gradient(to right, #025392 0%, #2a79c4 100%);
+    font-family: CircularStd, sans-serif;
+}
+p > a {
+    text-decoration: none;
+  }

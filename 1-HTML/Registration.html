@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="../2-Style/bootstrap.min.css" > 
+    <link rel="stylesheet" href="../2-Style/registeration.css" > 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="../3-JavaScript/registration.js"> </script>
+
+</head>
+<body>
+
+        <sctoion class="main">
+            <div class="container">
+                <div class="row sign ">
+                        <div id="sign2" class="text-center  pt-5 pb-3 px-5 mx-auto col-10 col-md-8 col-lg-6 col-lg-5 col-xl-5  ">
+                            
+                            <h2 class="text-center">Sign Up</h2> 
+
+                            <form class="text-center" action="">
+                                
+                                <div class=" my-4 "> 
+                                    <input type="text" class="form-control p-2" placeholder="First Name" id="firstName" required>
+                                    <span class="invalidSpan" > Please insert Valid Name</span>
+                                </div>
+                                
+                                <div class=" my-4"> 
+                                    <input type="text" class="form-control p-2" placeholder="Last Name" id="lastName" required>
+                                    <span class="invalidSpan" > Please insert Valid Name</span>
+                                </div>
+        
+                                <div class=" my-4"> 
+                                    <input type="number" class="form-control p-2" placeholder="Age" max="65" min="18" id="age" required>
+                                    <span class="invalidSpan" > age should be between 18 and 65</span>
+                                </div>
+        
+                                <div class=" my-4"> 
+                                    <input type="text" class="form-control p-2" placeholder="Address" id="address" required>
+                                    <span class="invalidSpan" > Please insert Valid Address</span>
+                                </div >
+        
+                                <div class=" my-4"> 
+                                    <input type="email" class="form-control p-2" placeholder="Email" id="email" required>
+                                    <span class="invalidSpan" > Email should be Like: abc@xyz.com</span>
+                                </div>
+
+                                <div class=" my-4"> 
+                                    <!-- <input type="radio" class="form-control p-2"  id="radio" required> -->
+                                    <input  type="radio" id="radio1" name="Employee" value="Employee">Employee
+                                    <input type="radio" id="radio2" name="Security" value="Security">Security
+
+                                    <span class="invalidSpan" > Email should be Like: abc@xyz.com</span>
+                                </div>
+                                
+                                <input  type="submit" class="btn-1 text-light border rounded  py-2 px-4 " id="submit" value="Sign Up">
+                                
+                            </form>
+                            <p class="mt-2" >
+                                Already have account? <a href="../1-HTML/login.html">Login</a>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+</html>
